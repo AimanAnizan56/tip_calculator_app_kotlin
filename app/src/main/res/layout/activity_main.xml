@@ -16,4 +16,9 @@
         android:inputType="numberDecimal"
         android:hint="Cost of Service"/>
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="How was the service?"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
