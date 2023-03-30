@@ -19,7 +19,12 @@ class MainActivity : AppCompatActivity() {
     private fun calculateTip() {
         /* get cost from textView with method chaining
         * -- text will return textView, not String, so convert with toString() method */
-        val cost = binding.costOfService.text.toString().toDouble()
+        val cost = binding.costOfService.text.toString().toDoubleOrNull()
+
+        if (cost == null) {
+            binding.tipResult.text = ""
+            return
+        }
 
         /* Get tip percentage from radio group
         * -- get from attribute: checked radio id */
